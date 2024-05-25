@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace LivGhit\CashierUI;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use LivGhit\CashierUI\Commands\CashierUICommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class CashierUIServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('cashierui')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_cashierui_table')
+            ->hasCommand(CashierUICommand::class);
     }
 }

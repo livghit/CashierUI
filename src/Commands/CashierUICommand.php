@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace LivGhit\CashierUI\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class CashierUICommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'cashierui';
 
     public $description = 'My command';
 
