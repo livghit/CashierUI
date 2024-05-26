@@ -2,9 +2,11 @@
 
 namespace LivGhit\CashierUI;
 
+use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use LivGhit\CashierUI\Commands\CashierUICommand;
+use LivGhit\CashierUI\Livewire\Test;
 
 class CashierUIServiceProvider extends PackageServiceProvider
 {
@@ -22,5 +24,10 @@ class CashierUIServiceProvider extends PackageServiceProvider
             ->hasRoutes('cashierui')
             ->hasMigration('create_cashierui_table')
             ->hasCommand(CashierUICommand::class);
+    }
+
+    public function packageBooted()
+    {
+        Livewire::component('cashierui.test', Test::class);
     }
 }
