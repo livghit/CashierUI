@@ -1,7 +1,10 @@
 <?php
 
+use function Pest\Laravel\get;
+
 it('loads billing view', function () {
-    expect(true)->toBeTrue();
+    get('/billing')
+    ->assertStatus(200);
 });
 
 it('has billing config', function () {

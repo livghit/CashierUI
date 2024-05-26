@@ -2,9 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\View\View;
 
-Route::get('/billing', function () {
-    return 'hello package';
+Route::get('/billing', function (): View {
+    return view("cashierui::billing");
 })->name('billing');
 
 Route::get('/billing/invoice/{invoiceId}', function (
