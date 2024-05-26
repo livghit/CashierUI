@@ -13,12 +13,13 @@ class CashierUIServiceProvider extends PackageServiceProvider
         /*
          * This class is a Package Service Provider
          *
-         * More info: https://github.com/spatie/laravel-package-tools
+         * More info: https//github.com/spatie/laravel-package-tools
          */
         $package
             ->name('cashierui')
             ->hasConfigFile()
             ->hasViews()
+            ->hasRoutes('cashierui')
             ->hasMigration('create_cashierui_table')
             ->hasCommand(CashierUICommand::class);
     }

@@ -4,6 +4,7 @@ namespace Workbench\App\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use LivGhit\CashierUI\CashierUIServiceProvider;
 
 class WorkbenchServiceProvider extends ServiceProvider
 {
@@ -12,7 +13,7 @@ class WorkbenchServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        CashierUIServiceProvider::class;
     }
 
     /**
