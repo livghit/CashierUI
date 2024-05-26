@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 
 Route::get('/billing', function (): View {
-    return view("cashierui::billing");
+    return view('cashierui::billing');
 })->name('billing');
 
 Route::get('/billing/invoice/{invoiceId}', function (
@@ -28,14 +28,14 @@ Route::get('/subscription-checkout/{price}', function (
         ]);
 })->name('subscription-checkout');
 
-Route::post('/billing/updateDefaultPaymentMethod/{paymentMethod}', function(){
+Route::post('/billing/updateDefaultPaymentMethod/{paymentMethod}', function () {
     // Allow user to update its default payment Method
 })->name('updateDefaultPaymentMethod');
 
-Route::post('/billing/cancelSubscription', function(){
+Route::post('/billing/cancelSubscription', function () {
     // implement this to allow user to cancel his subscription
 })->name('cancelSubscription');
 
-Route::post('/billing/resumeSubscription', function(){
+Route::post('/billing/resumeSubscription', function () {
     // implement this to allow user to resume subscription
 })->name('resumeSubscription');
